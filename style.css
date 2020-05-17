@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Jost', sans-serif;
+    padding: 5px;
+}
+
+#location {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#city, #country {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+button[type="submit"] {
+    margin-left: 20px;
+    padding: 12px 20px;
+}
+
+#your_weather_data {
+    margin-bottom: 8px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.container > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* height: 300px; */
+    height: auto;
+    background-image: url("./rain-316580_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /* padding-left: 10%; */
+}
+
+.forecast_days {
+    padding-left: 3%;
+    /* text-align: center; */
+}
+
+.forecast_display {
+    display: flex;
+}
+
+.each_hour {
+    flex-direction: column;
+    width: 50%;
+    /* background-color: red; */
+    /* margin-left: 3px; */
+    text-align: center;
+}
+
+.first_hour {
+    padding: 10px;
+}
+
+/* .sm_data {
+    font-size: 13px;
+} */
+
+.current_weather_data {
+    padding-left: 20%;
+}
+
+.lg_data_current_weather {
+    font-size: 30px;
+    padding-left: 10%;
+    /* text-align: center; */
+}
+
+.lg_data {
+    font-size: 30px;
+}
+
+#current_weather_description {
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: cursive;
+}
+
+#current_weather {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.temp {
+    font-size: 40px;
+}
+
+#submit_city_country_location {
+    cursor: pointer;
+}
+
+#submit_city_country_location:hover {
+    font-weight: bold;
+}
+
+#top {
+    margin-top: 0px;
+    height: fit-content;
+    background-color: red;
+    font-size: 300%;
+    text-align: center;
+    padding-top: 25px;
+    /* background-color: rgba(3, 3, 20); */
+    background-image: linear-gradient(to right, rgba(3, 3, 20, 1), rgba(9, 146, 233), rgba(3, 3, 20, 1));
+    /* color: black; */
+    font-weight: bold;
+}
