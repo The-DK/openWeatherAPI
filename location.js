@@ -144,13 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("City: " + city)
         console.log("Country: " + country)
 
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
         .then((response) => {
             return response.json()
         })
         .then((data)  => {
             // console.log(data)
-            console.log(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
+            console.log(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
             if (data.cod === "404" && data.message === "city not found") {
                 // document.querySelector("#current_weather").innerHTML= `${city}, ${country} is not a valid location. Please enter a valid city, country name`
                 return false
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         // IMPLEMENT FORECAST API CALL HERE AS WELL
 
-        console.log(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
+        console.log(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
         // Get weather day forecast
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
         .then((response) => {
             return response.json()
         })
