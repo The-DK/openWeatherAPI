@@ -49,7 +49,7 @@ function remove_all_child_nodes(element) {
     while (element.firstChild) {
         element.removeChild(element.lastChild)
     }
-    console.log("Remove all child nodes was called")
+    // console.log("Remove all child nodes was called")
 }
 
 function add_month_temp_to_divs(day, month, weather, day_no) {
@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const country_input = document.querySelector("#country")
         const country = country_input.value
 
-        console.log("City: " + city)
-        console.log("Country: " + country)
+        // console.log("City: " + city)
+        // console.log("Country: " + country)
 
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
         .then((response) => {
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((data)  => {
             // console.log(data)
-            console.log(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
+            // console.log(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country.toLowerCase()}&units=metric&APPID=${APPID}`)
             if (data.cod === "404" && data.message === "city not found") {
                 // document.querySelector("#current_weather").innerHTML= `${city}, ${country} is not a valid location. Please enter a valid city, country name`
                 return false
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         // IMPLEMENT FORECAST API CALL HERE AS WELL
 
-        console.log(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
+        // console.log(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
         // Get weather day forecast
         fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=${APPID}`)
         .then((response) => {
